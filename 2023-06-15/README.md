@@ -80,7 +80,7 @@ sudo systemctl restart docker
 
 ## run the container
 
-model=bigscience/bloom-1b7
+model=tiiuae/falcon-7b-instruct
 num_shard=1
 volume=$PWD/data # share a volume with the Docker container to avoid downloading weights every run
 
