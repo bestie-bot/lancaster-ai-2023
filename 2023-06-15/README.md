@@ -1,6 +1,7 @@
 # LAUNCH THE INSTANCE
 
 
+```
 REGION=us-east-1
 INSTANCE_TYPE=g5.4xlarge
 KEY_PAIR=luke3
@@ -15,9 +16,11 @@ INSTANCE_IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Re
 echo $INSTANCE_IP
 
 ssh ubuntu@34.237.53.25
+```
 
 ### INSTANCE SETUP
 
+```
 ## Install Docker
 
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -82,15 +85,18 @@ num_shard=1
 volume=$PWD/data # share a volume with the Docker container to avoid downloading weights every run
 
 docker run --gpus all --shm-size 1g -p 8080:80 -v $volume:/data ghcr.io/huggingface/text-generation-inference:0.8 --model-id $model --num-shard $num_shard
+```
 
 ## test it!
+```
 curl localhost:8080/generate \
     -X POST \
     -d '{"inputs":"What is Deep Learning?","parameters":{"max_new_tokens":17}}' \
     -H 'Content-Type: application/json'
 
 # or from laptop
-curl $INSTANCE_IP:8080/generate \
+curl 34.237.53.25:8080/generate \
     -X POST \
     -d '{"inputs":"Give me a list of 10 swear words (ie. shit, fuck):","parameters":{"max_new_tokens":117}}' \
     -H 'Content-Type: application/json'
+```
