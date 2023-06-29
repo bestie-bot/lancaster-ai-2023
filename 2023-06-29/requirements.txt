@@ -26,7 +26,6 @@ debugpy==1.6.7
 decorator==5.1.1
 defusedxml==0.7.1
 Deprecated==1.2.14
-dnspython==2.3.0
 et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==1.2.0
@@ -65,7 +64,6 @@ jupyter_server_terminals==0.4.4
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.7
 langchain==0.0.181
-loguru==0.7.0
 lxml==4.9.2
 Markdown==3.4.3
 MarkupSafe==2.1.2
@@ -101,7 +99,6 @@ pdfminer.six==20221105
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.5.0
-pinecone-client==2.2.2
 platformdirs==3.5.1
 prometheus-client==0.17.0
 prompt-toolkit==3.0.38
@@ -115,7 +112,6 @@ pypandoc==1.11
 pyrsistent==0.19.3
 python-dateutil==2.8.2
 python-docx==0.8.11
-python-dotenv==1.0.0
 python-json-logger==2.0.7
 python-magic==0.4.27
 python-pptx==0.6.21
@@ -140,7 +136,6 @@ tabulate==0.9.0
 tenacity==8.2.2
 terminado==0.17.1
 text-generation==0.6.0
-tiktoken==0.4.0
 tinycss2==1.2.1
 tornado==6.3.2
 tqdm==4.65.0
